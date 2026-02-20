@@ -1,0 +1,28 @@
+content:
+  - name: posts
+    label: Advice Columns
+    type: collection
+    path: _posts
+    # This automatically generates the slug based on the date and title
+    filename: "{year}-{month}-{day}-{title}.md"
+    fields:
+      - name: title
+        label: Question Headline
+        type: string
+        help: "e.g., My Boss is a Robot"
+      - name: date
+        label: Publish Date
+        type: datetime
+      - name: layout
+        type: hidden
+        default: single
+      - name: author_profile
+        type: hidden
+        default: true
+      - name: excerpt
+        label: Summary
+        type: string
+        help: "A short teaser for the advice list page."
+      - name: body
+        label: The Advice (Response)
+        type: rich-text
